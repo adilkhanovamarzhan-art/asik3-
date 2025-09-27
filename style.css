@@ -1,0 +1,273 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #111;
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Логотип "МА" */
+.logo {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ff6b6b; /* fallback */
+  letter-spacing: 2px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+.navbar .nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus {
+  text-decoration: underline;
+}
+
+/* Card Row (Flexbox) */
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+  align-items: stretch; /* равная высота */
+  flex-wrap: wrap; /* адаптивность */
+}
+.card {
+  flex: 1 1 260px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  flex: 1 1 auto;
+}
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #5f27cd;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card button:hover {
+  background: #341f97;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  margin: 2rem;
+  gap: 10px;
+}
+.grid-header { grid-area: header; background: #444; color: white; padding: 1rem; }
+.grid-sidebar { grid-area: sidebar; background: #ddd; padding: 1rem; }
+.grid-main { grid-area: main; background: #eee; padding: 1rem; }
+.grid-footer { grid-area: footer; background: #444; color: white; padding: 1rem; text-align: center; }
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 2rem;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+.gallery-item .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.6rem;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.25s;
+  font-size: 0.95rem;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-item:hover .caption {
+  transform: translateY(0);
+}
+
+/* Portfolio (Flex + Grid) */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+.portfolio-header .nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.portfolio-header .nav-links a:link,
+.portfolio-header .nav-links a:visited {
+  color: #fff; /* белый для обычных и посещённых */
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+.portfolio-header .nav-links a:hover,
+.portfolio-header .nav-links a:focus {
+  text-decoration: underline;
+}
+
+.portfolio-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 2rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: box-shadow 0.3s;
+  justify-content: space-between;
+  min-height: 160px;
+}
+.project-card button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.project-card button:hover {
+  background: #111;
+}
+
+/* Sidebar, footer, contact */
+.portfolio-sidebar {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.portfolio-footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+.contact {
+  text-align: center;
+  margin: 2rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.contact-btn {
+  padding: 0.5rem 1rem;
+  background: #5f27cd;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.contact-btn:hover {
+  background: #341f97;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+  .portfolio-main {
+    grid-template-columns: 1fr;
+  }
+  .card-row { gap: 0.75rem; }
+}
+@media (max-width: 480px) {
+  .navbar .nav-links ul { flex-direction: column; gap: 0.5rem; }
+  .card { flex-basis: 100%; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}

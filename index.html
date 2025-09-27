@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio by Marzhan Adilkhanova — Flexbox & Grid assignment" />
+  <title>Assignment 3 - Flexbox & Grid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="home">
+    <div class="logo">МА</div>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cards (Flexbox) -->
+  <section class="card-row" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="visually-hidden">About</h2>
+
+    <div class="card">
+      <img src="images/card1.jpeg" alt="Camera and landscape" />
+      <div class="card-body">
+        <div>
+          <h3>Photography</h3>
+          <p>I love capturing moments and everything that looks beautiful to my eyes.</p>
+        </div>
+        <button onclick="location.href='#projects'">Gallery</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/card2.jpeg" alt="Travel destination" />
+      <div class="card-body">
+        <div>
+          <h3>Travel</h3>
+          <p>I enjoy discovering new places and exploring beautiful destinations.</p>
+        </div>
+        <button>Explore</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/card3.jpeg" alt="Books on a table" />
+      <div class="card-body">
+        <div>
+          <h3>Reading</h3>
+          <p>In my free time, I read books for self-development and inspiration.</p>
+        </div>
+        <button>More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid Layout -->
+  <section class="grid-layout" aria-labelledby="grid-title">
+    <header class="grid-header" id="grid-title">My Grid Layout</header>
+    <aside class="grid-sidebar">
+      <ul>
+  <li><a href="https://doramy.club/37704-1-oxotnichi-psy.html" target="_blank" rel="noopener noreferrer">1kdrama</a></li>
+  <li><a href="https://doramy.club/24814-7-mysh.html" target="_blank" rel="noopener noreferrer">2kdrama</a></li>
+     </ul>
+    </aside>
+    <main class="grid-main">
+      <p>I wanted to add here my favorite K-dramas</p>
+    </main>
+    <footer class="grid-footer">© 2025 МА Grid Layout</footer>
+  </section>
+
+  <!-- Gallery (9 images) -->
+  <!-- Gallery (9 images) -->
+<section class="gallery" id="projects" aria-label="Gallery of works">
+  <figure class="gallery-item">
+    <img src="images/img1.jpeg" alt="image 1">
+    <figcaption class="caption">Skyline</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img2.jpeg" alt="image 2">
+    <figcaption class="caption">High above</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img3.jpeg" alt="image 3">
+    <figcaption class="caption">Sweet life</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img4.jpeg" alt="image 4">
+    <figcaption class="caption">Fast pace</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img5.jpeg" alt="image 5">
+    <figcaption class="caption">Inside view</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img6.jpeg" alt="image 6">
+    <figcaption class="caption">A still moment</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img7.jpeg" alt="image 7">
+    <figcaption class="caption">Serene view</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img8.jpeg" alt="image 8">
+    <figcaption class="caption">Alma-Ata</figcaption>
+  </figure>
+  <figure class="gallery-item">
+    <img src="images/img9.jpeg" alt="image 9">
+    <figcaption class="caption">Quiet reflection</figcaption>
+  </figure>
+</section>
+
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <header class="portfolio-header">
+      <div class="logo">МА</div>
+      <nav class="nav-links" aria-label="Portfolio navigation">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="portfolio-main">
+      <div class="projects">
+        <article class="project-card">
+          <div>
+            <h3>Assignment 1</h3>
+            <p>HTML Basics (Page Structure) — my first project where I practiced creating a simple webpage layout using semantic HTML tags.</p>
+          </div>
+          <button onclick="location.href='https://adilkhanovamarzhan-art.github.io/asik1/'">View on GitHub</button>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Assignment 2</h3>
+            <p>CSS Styling — my second project where I learned to style elements with colors, fonts, and layouts using CSS.</p>
+          </div>
+          <button onclick="location.href='https://adilkhanovamarzhan-art.github.io/assign2/'">View on GitHub</button>
+        </article>
+      </div>
+
+      <aside class="portfolio-sidebar">
+        <h3>About Me</h3>
+        <p>Hello! My name is Marzhan Adilkhanova. I am a student and beginner web developer. I enjoy working with HTML, CSS, and exploring frontend technologies. My goal is to grow as a developer and create modern, user-friendly websites.</p>
+      </aside>
+    </div>
+
+    <footer class="portfolio-footer">
+      © 2025 МА Portfolio
+    </footer>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h3>Contact Me</h3>
+    <p>Feel free to reach out:</p>
+    <div class="contact-links">
+      <a href="mailto:marzhanadilkhanova@gmail.com" class="contact-btn">Email</a>
+      <a href="tel:+77717871717" class="contact-btn">+7 (771) 787-1717</a>
+    </div>
+  </section>
+
+</body>
+</html>
